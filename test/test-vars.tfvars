@@ -1,0 +1,23 @@
+aws_region           = "us-east-1"
+bucket               = "bcpl-s3-nonprod-dev-terraform-state"
+key                  = "tfstate/networking-apificacion.tfstate"
+workspace_key_prefix = "UnityHA"
+bucket_region        = "us-east-1"
+prefix               = "bcpl"
+description          = "apificacion"
+environment          = "test"
+eks_version          = "1.28"
+ami_owner            = ["602401143452"]
+asg_desired_capacity = 1
+asg_max_size         = 2
+asg_min_size         = 1
+instance_type        = "m5.large"
+volume_size          = 100
+volume_type          = "gp2"
+tags = {
+  "Application Role" = "Microservicios",
+  "Project"          = "Unity",
+  "Owner"            = "Brenda Pichardo",
+  "Cost Center"      = "Pendiente",
+  "Business Unit"    = "Apificación"
+}
